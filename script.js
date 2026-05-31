@@ -511,7 +511,7 @@ function startTimer(){
       let letterPoints = word.length * 10;
 
       message.innerHTML =
-        "<span style='color:#183f35;font-size:22px'>" +
+        "<span style='color:#983f35;font-size:22px'>" +
         word +
         "</span>" +
         "⭐ " + letterPoints + " PUNTOS<br>" +
