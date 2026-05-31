@@ -1,0 +1,398 @@
+:root{
+  --forest:#183f35;
+  --bamboo:#d7c66a;
+  --leaf:#3f8f62;
+  --jade:#2a6f68;
+  --moss:#6d8a4e;
+  --cream:#fff7d6;
+  --ink:#172821;
+  --panel:#225344;
+  --tile:#132c26;
+  --highlight:#f4d35e;
+}
+
+body{
+
+  margin:0;
+
+  overflow:hidden;
+
+  background:
+  linear-gradient(
+  30deg,
+  #d7c66a 0%,
+  #3f8f62 44%,
+  #183f35 100%);
+
+  font-family:"Trebuchet MS", "Segoe UI", sans-serif;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  height:100vh;
+}
+
+.game{
+
+  position:relative;
+
+  width:100%;
+
+  max-width:430px;
+
+  height:100vh;
+
+  background:
+  linear-gradient(
+    180deg,
+    #2a6f68 0%,
+    #225344 48%,
+    #183f35 100%
+  );
+
+  border-radius:10px;
+
+  padding:8px;
+
+  box-sizing:border-box;
+
+  text-align:center;
+
+  color:var(--cream);
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:12px;
+
+  overflow:hidden;
+}
+
+/* ========================= */
+/* TITLE */
+/* ========================= */
+
+h1,
+h2{
+
+  margin:0;
+
+  font-size:clamp(28px, 8vw, 42px);
+
+  color:var(--cream);
+
+  letter-spacing:1px;
+
+  text-shadow:
+    0 12px 15px rgba(0,0,0,0.35);
+}
+
+/* ========================= */
+/* TOP BAR */
+/* ========================= */
+
+.topBar{
+
+  display:flex;
+
+  gap:6px;
+}
+
+.timer,
+.score{
+
+  flex:1;
+
+  background:var(--leaf);
+
+  border-radius:12px;
+
+  padding:6px;
+
+  font-size:24px;
+
+  font-weight:bold;
+
+  color:var(--cream);
+
+  text-shadow:
+    0 1px 4px rgba(0,0,0,0.35);
+}
+
+/* ========================= */
+/* WORD SLOTS */
+/* ========================= */
+
+.wordSlots{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:4px;
+
+  flex-wrap:wrap;
+
+  min-height:42px;
+}
+
+.slot{
+
+  width:36px;
+
+  height:40px;
+
+  background:var(--cream);
+
+  border-radius:8px;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  font-size:24px;
+
+  font-weight:bold;
+
+  color:var(--forest);
+
+  text-shadow:
+    0 2px 4px rgba(0,0,0,0.45);
+}
+
+/* ========================= */
+/* LETTER GRID */
+/* ========================= */
+
+.lettersGrid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(3,1fr);
+
+  gap:6px;
+
+  width:100%;
+}
+
+.letterBtn{
+
+  width:100%;
+
+  height:92px;
+
+  border:none;
+
+  border-radius:16px;
+
+  background:var(--tile);
+
+  color:var(--cream);
+
+  font-size:36px;
+
+  font-weight:bold;
+
+  text-shadow:
+    0 2px 5px rgba(0,0,0,0.45);
+
+  box-shadow:
+    0 3px 8px rgba(0,0,0,0.20);
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+}
+
+.letterBtn:disabled{
+
+  opacity:0.35;
+}
+
+.letterBtn:active{
+
+  transform:scale(0.97);
+}
+
+.letterBtn:focus-visible,
+button:focus-visible{
+
+  outline:3px solid var(--highlight);
+
+  outline-offset:3px;
+}
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+
+.buttons{
+
+  display:flex;
+
+  gap:8px;
+}
+
+.buttons button{
+
+  flex:1;
+}
+
+/* SHUFFLE MÁS ANCHO */
+
+.buttons button:nth-child(2){
+
+  flex:1.6;
+}
+
+button{
+
+  border:none;
+
+  border-radius:14px;
+
+  padding:10px;
+
+  font-size:24px;
+
+  font-weight:bold;
+
+  color:var(--cream);
+
+  background:var(--leaf);
+
+  text-shadow:
+    0 1px 3px rgba(0,0,0,0.35);
+}
+
+button:disabled{
+
+  cursor:not-allowed;
+
+  filter:saturate(0.65);
+
+  opacity:0.55;
+}
+
+.submitBtn{
+
+  background:var(--jade);
+
+  width:100%;
+}
+
+/* ========================= */
+/* MESSAGE */
+/* ========================= */
+.message{
+
+  background:
+linear-gradient(
+  30deg,
+  #fff7d6 0%,
+  #d7c66a 100%);
+
+  border-radius:14px;
+
+  padding:8px;
+
+  height:160px;
+
+  min-height:120px;
+
+  max-height:160px;
+
+  overflow-y:auto;
+
+  font-size:20px;
+
+  font-weight:bold;
+
+  line-height:1.15;
+
+  margin-bottom:70px;
+
+  color:var(--ink);
+
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.45);
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  text-align:center;
+
+  box-sizing:border-box;
+}
+
+
+.restartBtn{
+
+  position:fixed;
+
+  bottom:8px;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  width:calc(95% - 16px);
+
+  max-width:414px;
+
+  height:44px;
+  
+width:95%;
+
+  border:none;
+
+  border-radius:14px;
+
+  background:
+  linear-gradient(
+    192deg,
+    #f4d35e,
+    #3f8f62
+  );
+  
+
+  color:var(--ink);
+
+  font-weight:bold;
+
+  font-size:24px;
+
+  z-index:99999;
+}
+
+
+  html{
+
+  -webkit-text-size-adjust:100%;
+
+  text-size-adjust:100%;
+  }
+html,
+body,
+button,
+div,
+span,
+h1,
+h2{
+
+  -webkit-text-size-adjust:none;
+
+  text-size-adjust:none;
+  }
