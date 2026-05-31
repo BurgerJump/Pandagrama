@@ -628,7 +628,7 @@ function submitWord(){
 
   message.innerHTML =
 
-    "<span style='color:#f4d35e;font-size:26px'>" +
+    "<span style='color:#183f35;font-size:26px'>" +
 
     word +
 
